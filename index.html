@@ -368,6 +368,68 @@
       color: var(--hover-purple);
     }
 
+    /* About Section */
+    .about {
+      padding: 120px 0;
+      background: #FFFFFF;
+    }
+
+    .about .section-header h2 {
+      color: var(--primary-color);
+    }
+
+    .about .section-header p {
+      color: #6c757d;
+    }
+
+    .about-content {
+      background: #F8F9FA;
+      border-radius: 15px;
+      padding: 60px 40px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    }
+
+    .about-image img {
+      max-width: 200px;
+      width: 100%;
+      height: auto;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(62, 0, 116, 0.15);
+    }
+
+    .about-text {
+      color: #6c757d;
+      line-height: 1.8;
+    }
+
+    .about-text .lead {
+      font-size: 1.25rem;
+      font-weight: 500;
+      color: var(--primary-color);
+      margin-bottom: 25px;
+      line-height: 1.6;
+    }
+
+    .about-text p {
+      margin-bottom: 20px;
+      font-size: 16px;
+    }
+
+    .about-text p strong {
+      color: var(--primary-color);
+      font-weight: 600;
+    }
+
+    .about-text .closing {
+      font-size: 17px;
+      font-weight: 500;
+      color: var(--primary-color);
+      border-left: 4px solid var(--primary-color);
+      padding-left: 20px;
+      margin-top: 30px;
+      font-style: italic;
+    }
+
     /* Call to Action */
     .cta {
       background: linear-gradient(135deg, #2B0057 0%, var(--primary-color) 100%);
@@ -477,8 +539,30 @@
         height: 40px;
       }
 
-      .services, .cta {
+      .services, .about, .cta {
         padding: 80px 0;
+      }
+
+      .about-content {
+        padding: 40px 30px;
+      }
+
+      .about-image img {
+        max-width: 150px;
+        margin-bottom: 30px;
+      }
+
+      .about-text .lead {
+        font-size: 1.1rem;
+      }
+
+      .about-text p {
+        font-size: 15px;
+      }
+
+      .about-text .closing {
+        font-size: 16px;
+        padding-left: 15px;
       }
 
       .cta h3 {
@@ -517,6 +601,7 @@
             <ul>
               <li><a href="#hero">Home</a></li>
               <li><a href="#services">Services</a></li>
+              <li><a href="#about">About</a></li>
             </ul>
           </nav>
         </div>
@@ -590,6 +675,44 @@
               <div class="icon"><img src="https://i.ibb.co/GvKy27Dv/fcb37b9f-861c-4f40-a5b7-6f5777681acf.png" alt="Policy Implementation Icon"></div>
               <h3>Policy-Driven Process Implementation</h3>
               <p>Automate compliance and standardization. Ensure consistent service delivery while reducing manual oversight and human error.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+      <div class="container" data-aos="fade-up">
+        <header class="section-header">
+          <h2>About Will Young</h2>
+          <p>Technology leader with 15+ years of experience building smarter systems</p>
+        </header>
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+            <div class="about-content">
+              <div class="row align-items-center">
+                <div class="col-lg-4 text-center mb-4 mb-lg-0">
+                  <div class="about-image">
+                    <img src="Photo.jpeg" class="img-fluid" alt="Will Young - Will & Way Solutions">
+                  </div>
+                </div>
+                <div class="col-lg-8">
+                  <div class="about-text">
+                    <p class="lead">I'm Will Young — Founder of Will & Way Solutions and a technology leader with 15+ years of experience building smarter systems for service-based businesses.</p>
+                    
+                    <p>Before launching Will & Way, I served as CTO at a management consulting firm, where I managed a team of consultants, streamlined operations, and helped hundreds of MSPs and ITSPs turn their tech stacks into real growth engines. Over the years, I've managed everything from RMM and PSA platforms to quoting workflows, automation strategy, and custom reporting frameworks.</p>
+                    
+                    <p><strong>What I learned:</strong> most businesses don't need more tools — they need their tools to work together. They need someone who can connect the stack to the strategy.</p>
+                    
+                    <p><strong>That's where Will & Way Solutions comes in.</strong></p>
+                    
+                    <p>We help service providers automate with purpose — identifying high-impact opportunities, building custom workflows, and translating disconnected processes into cohesive systems that drive measurable results. No generic fixes. No fluff. Just solutions that align with how your business actually works.</p>
+                    
+                    <p class="closing">Whether you're scaling up, bogged down, or ready to make your systems work for you, I'm here to help you get there — with clarity, structure, and a way forward.</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
