@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Will & Way Solutions | Automate With Purpose</title>
+  <meta content="Strategic automation consulting for ITSPs and MSPs. We connect Rewst automation to real business outcomes with 15 years of industry experience." name="description">
+  <meta content="automation, consulting, rewst, ITSP, MSP, workflow, business automation, Will Young" name="keywords">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://willandway.solutions/">
+  <meta property="og:title" content="Will & Way Solutions | Automate With Purpose">
+  <meta property="og:description" content="Strategic automation consulting for ITSPs and MSPs. We connect Rewst automation to real business outcomes with 15 years of industry experience.">
+  <meta property="og:image" content="https://i.ibb.co/Xkv9S3Lz/67e203b0-3c7d-4c23-a45f-080ec8c77cf8.png">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://willandway.solutions/">
+  <meta property="twitter:title" content="Will & Way Solutions | Automate With Purpose">
+  <meta property="twitter:description" content="Strategic automation consulting for ITSPs and MSPs. We connect Rewst automation to real business outcomes with 15 years of industry experience.">
+  <meta property="twitter:image" content="https://i.ibb.co/Xkv9S3Lz/67e203b0-3c7d-4c23-a45f-080ec8c77cf8.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="https://i.ibb.co/Xkv9S3Lz/67e203b0-3c7d-4c23-a45f-080ec8c77cf8.png">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Bootstrap CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css" rel="stylesheet">
+  <!-- AOS Animation -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary-color: #3E0074;
+      --text-white: #FFFFFF;
+      --accent-gray: #C0B9D9;
+      --hover-purple: #5A1BA3;
+      --dark-overlay: rgba(62, 0, 116, 0.95);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Open Sans", sans-serif;
+      color: var(--text-white);
+      background-color: var(--primary-color);
+      line-height: 1.6;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: "Poppins", sans-serif;
+      font-weight: 600;
+      color: var(--text-white);
+    }
+
+    a {
+      color: var(--accent-gray);
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    a:hover {
+      color: var(--text-white);
+      text-decoration: none;
+    }
+
+    .back-to-top {
+      position: fixed;
+      visibility: hidden;
+      opacity: 0;
+      right: 15px;
+      bottom: 15px;
+      z-index: 996;
+      background: var(--text-white);
+      width: 40px;
+      height: 40px;
+      border-radius: 50px;
+      transition: all 0.4s;
+    }
+
+    .back-to-top i {
+      font-size: 28px;
+      color: var(--primary-color);
+      line-height: 0;
+    }
+
+    .back-to-top:hover {
+      background: var(--accent-gray);
+      color: var(--primary-color);
+    }
+
+    .back-to-top.active {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    /* Header */
+    .header {
+      transition: all 0.5s;
+      z-index: 997;
+      padding: 15px 0;
+      background: rgba(62, 0, 116, 0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(192, 185, 217, 0.1);
+    }
+
+    .header.header-scrolled {
+      background: rgba(62, 0, 116, 0.98);
+      box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .header .logo {
+      line-height: 0;
+    }
+
+    /* Navigation Menu */
+    .navbar {
+      padding: 0;
+    }
+
+    .navbar ul {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      list-style: none;
+      align-items: center;
+    }
+
+    .navbar li {
+      position: relative;
+    }
+
+    .navbar a,
+    .navbar a:focus {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 0 10px 30px;
+      font-family: "Open Sans", sans-serif;
+      font-size: 16px;
+      font-weight: 500;
+      color: var(--accent-gray);
+      white-space: nowrap;
+      transition: 0.3s;
+    }
+
+    .navbar a:hover,
+    .navbar .active,
+    .navbar .active:focus,
+    .navbar li:hover>a {
+      color: var(--text-white);
+    }
+
+    /* Hero Section */
+    .hero {
+      width: 100%;
+      min-height: 100vh;
+      background: linear-gradient(135deg, var(--primary-color) 0%, #2B0057 50%, #1a0040 100%);
+      position: relative;
+      display: flex;
+      align-items: center;
+      padding: 120px 0 80px;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('data:image/svg+xml,<svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><g fill="%23ffffff" fill-opacity="0.02"><circle cx="30" cy="30" r="2"/></g></g></svg>');
+      z-index: 1;
+    }
+
+    .hero .container {
+      row-gap: 5rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-img {
+      text-align: center;
+    }
+
+    .hero-img img {
+      width: 90%;
+      height: auto;
+      filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.3));
+    }
+
+    .hero h1 {
+      margin: 0;
+      font-size: 52px;
+      font-weight: 700;
+      color: var(--text-white);
+      font-family: "Poppins", sans-serif;
+    }
+
+    .hero .tagline {
+      color: var(--accent-gray);
+      margin: 10px 0 20px 0;
+      font-size: 18px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .hero h2 {
+      color: var(--accent-gray);
+      margin: 15px 0 30px 0;
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 1.4;
+    }
+
+    .hero .btn-get-started {
+      margin-top: 30px;
+      line-height: 0;
+      padding: 15px 40px;
+      border-radius: 50px;
+      transition: 0.5s;
+      color: var(--primary-color);
+      background: var(--text-white);
+      border: 2px solid var(--text-white);
+      font-weight: 600;
+      font-size: 16px;
+    }
+
+    .hero .btn-get-started:hover {
+      background: var(--accent-gray);
+      border-color: var(--accent-gray);
+      color: var(--primary-color);
+    }
+
+    /* Sections */
+    .section-bg {
+      background-color: rgba(0, 0, 0, 0.1);
+    }
+
+    .section-header {
+      text-align: center;
+      padding-bottom: 40px;
+    }
+
+    .section-header h2 {
+      font-size: 32px;
+      font-weight: 700;
+      position: relative;
+      color: var(--text-white);
+      font-family: "Poppins", sans-serif;
+    }
+
+    .section-header p {
+      margin: 10px 0 0 0;
+      padding: 0;
+      font-size: 18px;
+      line-height: 42px;
+      color: var(--accent-gray);
+    }
+
+    /* Services Section */
+    .services {
+      padding: 120px 0;
+      background: #F8F9FA;
+    }
+
+    .services .section-header h2 {
+      color: var(--primary-color);
+    }
+
+    .services .section-header p {
+      color: #6c757d;
+    }
+
+    .services .service-box {
+      background: #FFFFFF;
+      border: none;
+      height: 100%;
+      padding: 40px 30px;
+      text-align: center;
+      transition: all 0.3s ease;
+      border-radius: 15px;
+      box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .services .service-box::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(135deg, var(--primary-color), var(--hover-purple));
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+    }
+
+    .services .service-box .icon {
+      padding: 0;
+      border-radius: 50%;
+      position: relative;
+      margin-bottom: 25px;
+      display: inline-block;
+      line-height: 0;
+      transition: all 0.3s ease;
+      background: #40186a;
+      width: 80px;
+      height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .services .service-box .icon img {
+      width: 50px;
+      height: 50px;
+      transition: all 0.3s ease;
+    }
+
+    .services .service-box h3 {
+      color: var(--primary-color);
+      font-weight: 600;
+      margin-bottom: 15px;
+      font-family: "Poppins", sans-serif;
+      font-size: 20px;
+    }
+
+    .services .service-box p {
+      color: #6c757d;
+      line-height: 1.6;
+      font-size: 15px;
+    }
+
+    .services .service-box:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    }
+
+    .services .service-box:hover::before {
+      transform: scaleX(1);
+    }
+
+    .services .service-box:hover .icon {
+      transform: scale(1.1);
+      box-shadow: 0 10px 25px rgba(64, 24, 106, 0.4);
+      background: #40186a;
+    }
+
+    .services .service-box:hover .icon img {
+      transform: scale(1.05);
+    }
+
+    .services .service-box:hover h3 {
+      color: var(--hover-purple);
+    }
+
+    /* Call to Action */
+    .cta {
+      background: linear-gradient(135deg, #2B0057 0%, var(--primary-color) 100%);
+      padding: 120px 0;
+      text-align: center;
+      position: relative;
+    }
+
+    .cta::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.1);
+      z-index: 1;
+    }
+
+    .cta .container {
+      position: relative;
+      z-index: 2;
+    }
+
+    .cta h3 {
+      color: var(--text-white);
+      font-size: 32px;
+      font-weight: 700;
+      font-family: "Poppins", sans-serif;
+      margin-bottom: 15px;
+    }
+
+    .cta p {
+      color: var(--accent-gray);
+      font-size: 18px;
+      line-height: 1.6;
+      margin-bottom: 30px;
+    }
+
+    .cta .cta-btn {
+      font-family: "Poppins", sans-serif;
+      font-weight: 600;
+      font-size: 16px;
+      letter-spacing: 0.5px;
+      display: inline-block;
+      padding: 15px 40px;
+      border-radius: 50px;
+      transition: all 0.4s ease;
+      margin: 10px;
+      border: 2px solid var(--text-white);
+      color: var(--text-white);
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      text-transform: uppercase;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .cta .cta-btn:hover {
+      background: var(--text-white);
+      color: var(--primary-color);
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(255, 255, 255, 0.3);
+    }
+
+    /* Mobile Responsive */
+    @media (max-width: 768px) {
+      .hero {
+        padding: 100px 0 60px;
+      }
+
+      .hero h1 {
+        font-size: 36px;
+      }
+
+      .hero h2 {
+        font-size: 20px;
+        margin-bottom: 30px;
+      }
+
+      .hero .btn-get-started {
+        font-size: 16px;
+        padding: 12px 24px;
+      }
+
+      .navbar a {
+        padding: 10px 0 10px 20px;
+        font-size: 14px;
+      }
+
+      .section-header h2 {
+        font-size: 28px;
+      }
+
+      .services .service-box {
+        padding: 30px 20px;
+        margin-bottom: 30px;
+      }
+
+      .services .service-box .icon {
+        width: 70px;
+        height: 70px;
+      }
+
+      .services .service-box .icon img {
+        width: 40px;
+        height: 40px;
+      }
+
+      .services, .cta {
+        padding: 80px 0;
+      }
+
+      .cta h3 {
+        font-size: 28px;
+      }
+
+      .cta p {
+        font-size: 16px;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .hero h1 {
+        font-size: 28px;
+      }
+
+      .hero h2 {
+        font-size: 18px;
+      }
+
+      .hero .tagline {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header id="header" class="header fixed-top">
+    <div class="container-fluid container-xl">
+      <div class="row align-items-center justify-content-end">
+        <div class="col-auto">
+          <nav id="navbar" class="navbar">
+            <ul>
+              <li><a href="#hero">Home</a></li>
+              <li><a href="#services">Services</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero d-flex align-items-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 d-flex flex-column justify-content-center">
+          <div class="tagline" data-aos="fade-up">Automate With Purpose</div>
+          <h1 data-aos="fade-up" data-aos-delay="100">Automation That Actually Drives Results</h1>
+          <h2 data-aos="fade-up" data-aos-delay="400">We help MSPs and ITSPs unlock real value by connecting automation to business outcomes. 15 years of industry experience driving strategic automation success that actually works.</h2>
+          <div data-aos="fade-up" data-aos-delay="600">
+            <div class="text-center text-lg-start">
+              <a href="https://calendly.com/willandway/30min" target="_blank" class="btn-get-started d-inline-flex align-items-center justify-content-center align-self-center">
+                <span>Book Your Strategy Session</span>
+                <i class="bi bi-arrow-right ms-2"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 hero-img" data-aos="zoom-out" data-aos-delay="200">
+          <img src="https://i.ibb.co/Xkv9S3Lz/67e203b0-3c7d-4c23-a45f-080ec8c77cf8.png" class="img-fluid" alt="Will & Way Solutions Automation">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main id="main">
+    <!-- Services Section -->
+    <section id="services" class="services">
+      <div class="container" data-aos="fade-up">
+        <header class="section-header">
+          <h2>Our Services</h2>
+          <p>Comprehensive automation solutions that connect to real business outcomes</p>
+        </header>
+        <div class="row gy-4">
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-box">
+              <div class="icon"><img src="https://i.ibb.co/GvKy27Dv/fcb37b9f-861c-4f40-a5b7-6f5777681acf.png" alt="Automation Strategy Icon"></div>
+              <h3>Automation Strategy & Consulting</h3>
+              <p>Map your processes to business outcomes. We identify the highest-impact automation opportunities and create implementation roadmaps that deliver measurable ROI.</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-box">
+              <div class="icon"><img src="https://i.ibb.co/GvKy27Dv/fcb37b9f-861c-4f40-a5b7-6f5777681acf.png" alt="Custom Workflow Icon"></div>
+              <h3>Custom Workflow Development</h3>
+              <p>Built-to-spec automation tailored to your unique processes. No so-called <em>"standard"</em> solutions—every workflow is purpose-built for your business.</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="service-box">
+              <div class="icon"><img src="https://i.ibb.co/GvKy27Dv/fcb37b9f-861c-4f40-a5b7-6f5777681acf.png" alt="Stack Debugging Icon"></div>
+              <h3>Stack Debugging & Optimization</h3>
+              <p>Bring your tool stack to best practice so your tools work for you, not the other way around. Transform disconnected systems into a cohesive automation ecosystem.</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+            <div class="service-box">
+              <div class="icon"><img src="https://i.ibb.co/GvKy27Dv/fcb37b9f-861c-4f40-a5b7-6f5777681acf.png" alt="Data Extraction Icon"></div>
+              <h3>Data Extraction & Reporting</h3>
+              <p>Transform scattered data into actionable insights. Custom reporting solutions that give you visibility into what's actually driving your business.</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+            <div class="service-box">
+              <div class="icon"><img src="https://i.ibb.co/GvKy27Dv/fcb37b9f-861c-4f40-a5b7-6f5777681acf.png" alt="Policy Implementation Icon"></div>
+              <h3>Policy-Driven Process Implementation</h3>
+              <p>Automate compliance and standardization. Ensure consistent service delivery while reducing manual oversight and human error.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call To Action Section -->
+    <section id="cta" class="cta">
+      <div class="container" data-aos="zoom-in">
+        <div class="row">
+          <div class="col-lg-9 text-center text-lg-start">
+            <h3>Ready to Scale Your MSP?</h3>
+            <p>Stop fighting broken workflows. Start with automation that actually works. Get strategic automation that reduces noise, increases margin, and scales with your team.</p>
+          </div>
+          <div class="col-lg-3 cta-btn-container text-center">
+            <a class="cta-btn align-middle" href="https://calendly.com/willandway/30min" target="_blank">Book Your Strategy Session</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+  <!-- AOS Animation -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+  <script>
+    // Initialize AOS
+    AOS.init({
+      duration: 1000,
+      easing: 'ease-in-out',
+      once: true,
+      mirror: false
+    });
+
+    // Header scroll effect
+    const header = document.querySelector('#header');
+    const toggleHeaderScrolled = () => {
+      if (window.scrollY > 100) {
+        header.classList.add('header-scrolled');
+      } else {
+        header.classList.remove('header-scrolled');
+      }
+    }
+    window.addEventListener('load', toggleHeaderScrolled);
+    document.addEventListener('scroll', toggleHeaderScrolled);
+
+    // Smooth scrolling for nav links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+
+    // Back to top button
+    const backtotop = document.querySelector('.back-to-top');
+    if (backtotop) {
+      const toggleBacktotop = () => {
+        if (window.scrollY > 100) {
+          backtotop.classList.add('active');
+        } else {
+          backtotop.classList.remove('active');
+        }
+      }
+      window.addEventListener('load', toggleBacktotop);
+      document.addEventListener('scroll', toggleBacktotop);
+    }
+
+    // Counter animation
+    const counters = document.querySelectorAll('.purecounter');
+    const animateCounters = () => {
+      counters.forEach(counter => {
+        const target = parseInt(counter.getAttribute('data-purecounter-end'));
+        const duration = parseInt(counter.getAttribute('data-purecounter-duration')) * 1000;
+        const increment = target / (duration / 16); // 60fps
+        let current = 0;
+
+        const updateCounter = () => {
+          if (current < target) {
+            current += increment;
+            counter.textContent = Math.floor(current);
+            requestAnimationFrame(updateCounter);
+          } else {
+            counter.textContent = target;
+          }
+        };
+
+        // Check if element is in viewport
+        const rect = counter.getBoundingClientRect();
+        if (rect.top < window.innerHeight && rect.bottom > 0) {
+          updateCounter();
+        }
+      });
+    };
+
+    // Trigger counter animation on scroll
+    let animated = false;
+    window.addEventListener('scroll', () => {
+      if (!animated) {
+        const statsSection = document.querySelector('#stats');
+        const rect = statsSection.getBoundingClientRect();
+        if (rect.top < window.innerHeight && rect.bottom > 0) {
+          animateCounters();
+          animated = true;
+        }
+      }
+    });
+  </script>
+
+</body>
+
+</html>
